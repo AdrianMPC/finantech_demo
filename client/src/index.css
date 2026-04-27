@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-duo-gray-light text-duo-navy;
+    font-family: 'DIN Round Pro', 'Nunito', 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-duo-green hover:bg-duo-green-dark active:translate-y-0.5
+           text-white font-bold py-3 px-6 rounded-2xl
+           border-b-4 border-duo-green-dark
+           transition-all duration-150 select-none cursor-pointer
+           disabled:opacity-50 disabled:cursor-not-allowed disabled:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-50 active:translate-y-0.5
+           text-duo-navy font-bold py-3 px-6 rounded-2xl
+           border-2 border-duo-gray-mid border-b-4
+           transition-all duration-150 select-none cursor-pointer;
+  }
+
+  .btn-danger {
+    @apply bg-duo-red hover:bg-duo-red-dark active:translate-y-0.5
+           text-white font-bold py-3 px-6 rounded-2xl
+           border-b-4 border-duo-red-dark
+           transition-all duration-150 select-none cursor-pointer;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl border-2 border-duo-gray-mid p-5 shadow-sm;
+  }
+}
